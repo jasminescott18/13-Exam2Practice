@@ -5,8 +5,8 @@ This problem provides practice at:
   ***  IMPLEMENTING CLASSES.  ***
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Jasmine Scott.
+"""  # COMPLETED: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 # Students:
@@ -39,8 +39,8 @@ def main():
     # UN-comment tests as you work the problems.
     ####################################################################
 
-#     run_test_init()
-#     run_test_append_string()
+    run_test_init()
+    run_test_append_string()
 #     run_test_double()
 #     run_test_shrink()
 #     run_test_double_then_shrink()
@@ -93,8 +93,14 @@ class Box(object):
           :type contents: str
           :type volume: int
         """
+
+        self.contents = contents
+        self.volume = volume
+        if len(self.contents) > volume:
+            self.contents = ''
+
         # --------------------------------------------------------------
-        # TODO: 2. Implement and test this function.
+        # COMPLETED: 2. Implement and test this function.
         #     See the testing code (below) for more examples.
         # --------------------------------------------------------------
         # --------------------------------------------------------------
@@ -134,8 +140,21 @@ class Box(object):
         Type hints:
           :type additional_contents: str
         """
+
+        space = self.volume - len(self.contents)
+        number_of_characters_to_append = min(space, len(additional_contents))
+        stuff_to_add = ''
+        for k in range(number_of_characters_to_append):
+            stuff_to_add = stuff_to_add + additional_contents[k]
+        self.contents = self.contents + stuff_to_add
+        stuff_to_return = ''
+        for k in range(number_of_characters_to_append,
+                       len(additional_contents)):
+            stuff_to_return = stuff_to_return + additional_contents[k]
+        return stuff_to_return
+
         # --------------------------------------------------------------
-        # TODO: 3. Implement and test this function.
+        # COMPLETED: 3. Implement and test this function.
         #     See the testing code (below) for more examples.
         # --------------------------------------------------------------
         # --------------------------------------------------------------
