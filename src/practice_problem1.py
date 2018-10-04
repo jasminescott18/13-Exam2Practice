@@ -41,7 +41,7 @@ def main():
 
     run_test_init()
     run_test_append_string()
-#     run_test_double()
+    run_test_double()
 #     run_test_shrink()
 #     run_test_double_then_shrink()
 #     run_test_reset()
@@ -209,8 +209,11 @@ class Box(object):
           #   s is 'Robot Fun'   [this is the part of the doubled
           #                       contents that did NOT fit]
         """
+
+        return self.append_string(self.contents)
+
         # --------------------------------------------------------------
-        # TODO: 4. Implement and test this function.
+        # COMPLETED: 4. Implement and test this function.
         #     The testing code is already written for you (above).
         # --------------------------------------------------------------
         # --------------------------------------------------------------
