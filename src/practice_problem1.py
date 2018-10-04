@@ -42,7 +42,7 @@ def main():
     run_test_init()
     run_test_append_string()
     run_test_double()
-#     run_test_shrink()
+    run_test_shrink()
 #     run_test_double_then_shrink()
 #     run_test_reset()
 #     run_test_steal()
@@ -261,6 +261,10 @@ class Box(object):
         Type hints:
           :type new_volume: int
         """
+
+        self.__init__(self.contents, new_volume)
+        
+
         # --------------------------------------------------------------
         # TODO: 5. Implement and test this function.
         #     The testing code is already written for you (above).
