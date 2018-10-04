@@ -262,9 +262,6 @@ class Box(object):
           :type new_volume: int
         """
 
-        self.__init__(self.contents, new_volume)
-        
-
         # --------------------------------------------------------------
         # TODO: 5. Implement and test this function.
         #     The testing code is already written for you (above).
