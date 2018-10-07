@@ -266,7 +266,7 @@ class Box(object):
         if self.volume < len(self.contents):
             difference = len(self.contents) - new_volume
             for k in range(difference):
-                new_contents =
+                new_contents = 5
 
         # --------------------------------------------------------------
         # TODO: 5. Implement and test this function.
