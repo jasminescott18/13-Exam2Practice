@@ -552,7 +552,7 @@ def practice_problem3e(sequence):
     total = 0
     for k in range(len(sequence)):
         total = total + sequence[k * 2]
-    return total
+    return total 
 
     # ------------------------------------------------------------------
     # COMPLETED: 7. Implement and test this function.
