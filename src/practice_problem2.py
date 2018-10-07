@@ -207,8 +207,13 @@ def practice_problem2b(sequence):
     answer = ''
     for k in range(len(sequence)):
         word = sequence[k]
-        capture = word[0]
-        answer = answer + capture
+        if word == '':
+            word = sequence[k + 1]
+            capture = word[0]
+            answer = answer + capture
+        else:
+            capture = word[0]
+            answer = answer + capture
     return answer
 
     ####################################################################
