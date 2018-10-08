@@ -261,8 +261,9 @@ class Box(object):
         Type hints:
           :type new_volume: int
         """
-        
 
+        self.volume = new_volume
+        
         # --------------------------------------------------------------
         # TODO: 5. Implement and test this function.
         #     The testing code is already written for you (above).
