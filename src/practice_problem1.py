@@ -261,12 +261,7 @@ class Box(object):
         Type hints:
           :type new_volume: int
         """
-        new_contents = ''
-        self.volume = new_volume
-        if self.volume < len(self.contents):
-            difference = len(self.contents) - new_volume
-            for k in range(difference):
-                new_contents = 5
+        
 
         # --------------------------------------------------------------
         # TODO: 5. Implement and test this function.
