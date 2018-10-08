@@ -263,7 +263,37 @@ class Box(object):
         """
 
         self.volume = new_volume
-        
+        # Determine how much space is available for the new contents,
+        # and then how many characters of the additional_contents
+        # can be appended to this Box's contents:
+
+        space = new_volume
+        number_of_characters_to_append = len(self.contents) - new_volume
+
+        # Build up a string that is the characters to append
+        # (that is, those that will fit into this Box).
+        # Then append that string to this Box's contents:
+
+        stuff_to_add = ''
+        # Put a LOOP HERE to build up  stuff_to_add
+        for k in range(new_volume):
+            stuff_to_add = stuff_to_add + self.contents[k]
+        self.contents = stuff_to_add
+
+        # Build up a string that is the characters that were NOT
+        # appended, by starting at the place where the previous loop
+        # left off and continuing to the end of the additional_contents.
+        # This will be a loop that goes NO times if the entire
+        # additional_contents fits into this Box's contents:
+
+        stuff_to_return = ''
+        # Put a LOOP HERE to build up  stuff_to_return
+        for k in range(7):
+            stuff_to_return = stuff_to_return + self.contents[]
+        # Return the result from the previous loop:
+
+        return stuff_to_return
+
         # --------------------------------------------------------------
         # TODO: 5. Implement and test this function.
         #     The testing code is already written for you (above).
