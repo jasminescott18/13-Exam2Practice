@@ -44,9 +44,9 @@ def main():
     run_test_double()
     run_test_shrink()
     run_test_double_then_shrink()
-#     run_test_reset()
+    run_test_reset()
 #     run_test_steal()
-#     run_test_get_history()
+    run_test_get_history()
 #     run_test_combined_box()
 
 
@@ -99,6 +99,8 @@ class Box(object):
         if len(self.contents) > volume:
             self.contents = ''
         self.contents_clone = contents
+        self.volume_clone = volume
+        self.contents_history = contents
 
         # --------------------------------------------------------------
         # COMPLETED: 2. Implement and test this function.
@@ -262,7 +264,6 @@ class Box(object):
         Type hints:
           :type new_volume: int
         """
-
         self.volume = new_volume
         stuff_to_add = ''
 
@@ -335,10 +336,11 @@ class Box(object):
         """
         self.double()
         self.shrink(new_volume)
-        value = len(self.contents) - new_volume
-        return value
+        value =
+        return
+
         # --------------------------------------------------------------
-        # TODO: 6. Implement and test this function.
+        # COMPLETED: 6. Implement and test this function.
         #     The testing code is already written for you (above).
         # --------------------------------------------------------------
         # --------------------------------------------------------------
@@ -356,6 +358,8 @@ class Box(object):
           Changes this Box's contents and volume to whatever they were
           when this Box was constructed.
         """
+        self.contents_history = self.contents
+        return self.contents_clone and self.volume_clone
         # --------------------------------------------------------------
         # TODO: 7. Implement and test this function.
         #     The testing code is already written for you (above).
@@ -427,6 +431,7 @@ class Box(object):
           h = b.get_history()
           #   h is now ['GoodGo', 'GoodBye']
         """
+        return self.contents_history
         # --------------------------------------------------------------
         # TODO: 9. Implement and test this function.
         #     The testing code is already written for you (above).
